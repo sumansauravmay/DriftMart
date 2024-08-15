@@ -13,8 +13,12 @@ import NoCartData from "../../Components/NoCartData";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import LoadingCart from "../../Components/LoadingCart";
+import { useToast } from '@chakra-ui/react';
+
+
 
 const Cart = () => {
+  const toast = useToast();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const cartdata = useSelector((store) => store.cartReducer.cart);
@@ -70,11 +74,25 @@ const Cart = () => {
     let username = JSON.parse(localStorage.getItem("username")) || "";
     if (username) {
       dispatch(cartDataReset());
-      alert("Item ordered successfully!");
+      toast({
+        title: 'Item ordered successfully!',
+        description: "You have successfuly placed order!",
+        status: 'success',
+        position:'top',
+        duration: 6000,
+        isClosable: true,
+      });
       navigate("/");
       localStorage.removeItem("CartAmount");
     } else {
-      alert("Please login first!");
+      toast({
+        title: 'Login First.',
+        description: "Login, if you want to place order.",
+        status: 'warning',
+        position:'top',
+        duration: 6000,
+        isClosable: true,
+      })
       navigate("/login");
     }
   };
