@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
                   <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                          <a href="https://www.myindiaa.com/" nonce="hover:underline">MYIndiaa</a>
+                          <a href="https://www.myindiaa.com/" nonce="hover:underline">DriftMart</a>
 
                   </span>
           </div>
@@ -49,7 +49,7 @@ const Footer = () => {
       </div>
       <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
       <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://www.myindiaa.com/" className="hover:underline">MyIndiaa™</a>. All Rights Reserved.
+          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://www.myindiaa.com/" className="hover:underline">DriftMart™</a>. All Rights Reserved.
           </span>
           <div className="flex mt-4 sm:justify-center sm:mt-0">
               <a href="https://github.com/sumansauravmay" className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
