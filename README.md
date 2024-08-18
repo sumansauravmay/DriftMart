@@ -22,7 +22,7 @@ Welcome to the E-commerce Website Frontend repository. This project is a fully r
 
 Check out the live demo of the project [here](https://prismatic-taffy-891d87.netlify.app/).
 
-- Frontend Deployed Link(Netlify): [https://prismatic-taffy-891d87.netlify.app/](https://prismatic-taffy-891d87.netlify.app/)
+- Frontend Deployed Link(Netlify): [https://symphonious-lollipop-6048de.netlify.app/](https://symphonious-lollipop-6048de.netlify.app/)
 
 - Backend Deployed Link(Render): [https://myindiaa-deployement.onrender.com/](https://myindiaa-deployement.onrender.com/)
 
