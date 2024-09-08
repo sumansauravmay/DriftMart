@@ -40,6 +40,7 @@ const Navbar = () => {
                 <Link to="/">
                   <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
                     <span>DriftMart</span>
+                    <img className="h-20" src={require('../assets/driftmart_logo.png')} alt="logo"/>
                   </span>
                 </Link>
 
