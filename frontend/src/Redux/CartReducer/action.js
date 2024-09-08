@@ -57,7 +57,8 @@ export const resetCartSuccess = () => {
   };
 };
 
-export const cart = (product) => async (dispatch) => {
+export const cart = (product, toast) => async (dispatch) => {
+
   dispatch(getCartRequestAction());
   if (product) {
     let data = {
@@ -71,7 +72,14 @@ export const cart = (product) => async (dispatch) => {
           .get("https://myindiaa-deployement.onrender.com/cart")
           .then((res) => {
             dispatch(getCartSuccessAction(res.data));
-            alert("Product added successfully!")
+            toast({
+              title: 'Product Added.',
+              description: "Product added successfully!",
+              status: 'success',
+              position:'top',
+              duration: 9000,
+              isClosable: true,
+            })
           });
       })
       .catch((err) => {
@@ -86,7 +94,7 @@ export const cart = (product) => async (dispatch) => {
         dispatch(getCartSuccessAction(res.data));
       })
       .catch((err) => {
-        console.log("err", err);
+        console.log("err2", err);
         dispatch(getCartErrorAction());
       });
   }

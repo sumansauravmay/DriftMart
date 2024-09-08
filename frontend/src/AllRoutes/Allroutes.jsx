@@ -7,6 +7,8 @@ import Cart from "../Pages/Cart/Cart";
 import Menproducts from "../Pages/MenProducts/Menproducts";
 import Womenproducts from "../Pages/WomenProducts/Womenproducts";
 import ProductsDetails from "../Pages/ProductsDetails.jsx/ProductsDetails";
+import Checkout from "../Pages/Checkout/Checkout";
+import Payment from "../Pages/Payment/Payment";
 
 const Allroutes = () => {
   return (
@@ -18,6 +20,8 @@ const Allroutes = () => {
       <Route path="/menproducts" element={<Menproducts />}></Route>
       <Route path="/womenproducts" element={<Womenproducts />}></Route>
       <Route path="/products/:product_id" element={<ProductsDetails />}></Route>
+      <Route path="/checkout" element={<Checkout/>}></Route>
+      <Route path="/payment" element={<Payment/>}></Route>
     </Routes>
   );
 };

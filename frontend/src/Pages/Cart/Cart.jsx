@@ -36,10 +36,12 @@ const Cart = () => {
   };
 
   const calculateAmount = () => {
-    return cartdata.reduce(
+    let price= cartdata.reduce(
       (total, item) => total + item.price * item.quantity,
       0
     );
+    localStorage.setItem("itemvalue", JSON.stringify(price));
+    return price;
   };
 
   const calculateDeliveryCharges = () => {
@@ -57,7 +59,7 @@ const Cart = () => {
     } else {
       x = calculateAmount() + calculateDeliveryCharges();
     }
-    localStorage.setItem("CartAmount", JSON.stringify(x));
+    // localStorage.setItem("cartamount", JSON.stringify(x));
     return x;
   };
 
@@ -73,16 +75,7 @@ const Cart = () => {
   const handlechekcout = () => {
     let username = JSON.parse(localStorage.getItem("username")) || "";
     if (username) {
-      dispatch(cartDataReset());
-      toast({
-        title: 'Item ordered successfully!',
-        description: "You have successfuly placed order!",
-        status: 'success',
-        position:'top',
-        duration: 6000,
-        isClosable: true,
-      });
-      navigate("/");
+      navigate("/checkout");
       localStorage.removeItem("CartAmount");
     } else {
       toast({

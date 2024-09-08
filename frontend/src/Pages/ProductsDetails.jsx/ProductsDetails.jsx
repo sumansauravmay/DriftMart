@@ -6,8 +6,10 @@ import { cart } from "../../Redux/CartReducer/action";
 import Loading from "../../Components/Loading";
 import { Helmet } from "react-helmet";
 import ProductsDetailsCard from "../../Components/ProductsDetailsCard";
+import { useToast } from '@chakra-ui/react';
 
 const ProductsDetails = () => {
+  const toast = useToast()
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
   const { product_id } = useParams();
@@ -44,7 +46,7 @@ const ProductsDetails = () => {
         price={productDetails.price}
         rating={productDetails.rating?.rate}
         count={productDetails.rating?.count}
-        cartData={() => dispatch(cart(productDetails))}
+        cartData={() => dispatch(cart(productDetails, toast))}
       />
     </>
   );

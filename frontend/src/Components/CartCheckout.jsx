@@ -10,7 +10,7 @@ const CartCheckout = ({ totalAmount, amount, delivery, message, handlechekcout }
             <p className="text-black text-xl">{amount}</p>
           </div>
           <div className="mt-5 mb-5 px-10 max-w-xl flex justify-between">
-            <h5 className="text-xl text-black font-bold">Delivery Charge: </h5>
+            <h5 className="text-xl text-black font-bold">Shipping Fee: </h5>
             <p className="text-black text-xl">{delivery}</p>
           </div>
           <p className="text-center text-blue-600 font-semibold">{message}</p>
