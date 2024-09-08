@@ -40,7 +40,11 @@ const Navbar = () => {
                 <Link to="/">
                   <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
                     <span>DriftMart</span>
-                    <img className="h-20" src={require('../assets/driftmart_logo.png')} alt="logo"/>
+                    <img
+                      className="h-20"
+                      src={require("../assets/driftmart_logo.png")}
+                      alt="logo"
+                    />
                   </span>
                 </Link>
 
@@ -99,7 +103,6 @@ const Navbar = () => {
                       className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5"
                     >
                       Go to Cart ({cartdata.length > 0 ? cartdata.length : 0})
-                     
                     </Link>
                   </>
                 </Disclosure.Panel>
@@ -146,7 +149,9 @@ const Navbar = () => {
             className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5 flex space-x-1"
           >
             <FaShoppingCart />
-            <p className="-mt-1">({cartdata.length > 0 ? cartdata.length : 0})</p>
+            <p className="-mt-1">
+              ({cartdata.length > 0 ? cartdata.length : 0})
+            </p>
           </Link>
         </div>
       </nav>

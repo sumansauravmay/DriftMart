@@ -1,6 +1,16 @@
 import React from "react";
 
-const CartCard = ({ image, title, price, quantity, handleDelete,  handleDecDisable, handleInc, handleDec, handleIncDisable }) => {
+const CartCard = ({
+  image,
+  title,
+  price,
+  quantity,
+  handleDelete,
+  handleDecDisable,
+  handleInc,
+  handleDec,
+  handleIncDisable,
+}) => {
   return (
     <div className="flex justify-center">
       <div className="md:flex mt-8 md:-mx-4 w-1/2 shadow-lg shadow-indigo-500/40">
@@ -9,13 +19,21 @@ const CartCard = ({ image, title, price, quantity, handleDelete,  handleDecDisab
             <div className="px-10 max-w-xl">
               <img className="h-[10rem] w-[7rem]" src={image} alt="pic" />
               <div className="w-full">
-                <button className="mt-2 text-black text-2xl border-2 w-1/3" disabled={ handleDecDisable} onClick={handleDec}>
+                <button
+                  className="mt-2 text-black text-2xl border-2 w-1/3"
+                  disabled={handleDecDisable}
+                  onClick={handleDec}
+                >
                   -
                 </button>
                 <button className="mt-2 text-black text-2xl border-2 w-1/3">
                   {quantity}
                 </button>
-                <button className="mt-2 text-black text-2xl border-2 w-1/3" onClick={handleInc} disabled={handleIncDisable}>
+                <button
+                  className="mt-2 text-black text-2xl border-2 w-1/3"
+                  onClick={handleInc}
+                  disabled={handleIncDisable}
+                >
                   +
                 </button>
               </div>

@@ -13,9 +13,7 @@ import NoCartData from "../../Components/NoCartData";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import LoadingCart from "../../Components/LoadingCart";
-import { useToast } from '@chakra-ui/react';
-
-
+import { useToast } from "@chakra-ui/react";
 
 const Cart = () => {
   const toast = useToast();
@@ -36,7 +34,7 @@ const Cart = () => {
   };
 
   const calculateAmount = () => {
-    let price= cartdata.reduce(
+    let price = cartdata.reduce(
       (total, item) => total + item.price * item.quantity,
       0
     );
@@ -79,19 +77,19 @@ const Cart = () => {
       localStorage.removeItem("CartAmount");
     } else {
       toast({
-        title: 'Login First.',
+        title: "Login First.",
         description: "Login, if you want to place order.",
-        status: 'warning',
-        position:'top',
+        status: "warning",
+        position: "top",
         duration: 6000,
         isClosable: true,
-      })
+      });
       navigate("/login");
     }
   };
 
   if (loading) {
-    return <LoadingCart/>;
+    return <LoadingCart />;
   }
 
   return (
