@@ -33,11 +33,13 @@ Check out the live demo of the project [here](https://prismatic-taffy-891d87.net
 - User Authentication (Sign Up, Login, Logout)
 - Product Listing
 - Product Search
-- Product For Men And Women
+- Product For Men, Women and Electronics
 - Search by product title or description
 - Product Details
 - Shopping Cart
 - Checkout Process
+- Address
+- Payment
 - Responsive Design
 
 ## Technologies Used
@@ -47,6 +49,7 @@ Check out the live demo of the project [here](https://prismatic-taffy-891d87.net
 - **React Router**: Declarative routing for React
 - **Axios**: Promise-based HTTP client for API calls
 - **Tailwind CSS**: For the Styling
+- **Chakra UI**: For the Styling
 - **React Hook Form**: Form validation and management
 
 ## Installation
@@ -61,13 +64,14 @@ Check out the live demo of the project [here](https://prismatic-taffy-891d87.net
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/sumansauravmay/myindiaa_frontend.git
+   git clone https://github.com/sumansauravmay/DriftMart.git
    ```
 
 2. Navigate to the project directory:
 
 ```bash
-   cd myindiaa_frontend
+   cd DriftMart
+   cd frontend
 ```
 
 3. Install dependencies:
@@ -107,7 +111,7 @@ now add a new file inside build folder named \_redirects and write
 ## Project Structure
 
 ```bash
-   ecommerce-frontend/
+   frontend/
 ├── public/
 │   ├── index.html
 │   └── ...
